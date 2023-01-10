@@ -42,7 +42,7 @@ public class Save {
 
         do {
             if (i == len - 1) {
-                playerReturn.setLevelXp(Integer.parseInt(stats.substring(startOfNext, len)));
+                playerReturn.setPointsSpent(Integer.parseInt(stats.substring(startOfNext, len)));
             }
             else if (stats.charAt(i) == ' ') {
                 //final int temp = Integer.parseInt(stats.substring(startOfNext, i));
@@ -55,7 +55,7 @@ public class Save {
                     case 3 -> playerReturn.setName(stats.substring(startOfNext, i));
                     case 4 -> playerReturn.setSpecialMoveStrength(Integer.parseInt(stats.substring(startOfNext, i)));
                     case 5 -> playerReturn.setLevel(Integer.parseInt(stats.substring(startOfNext, i)));
-                    case 6 -> playerReturn.setPointsSpent(Integer.parseInt(stats.substring(startOfNext, i)));
+                    case 6 -> playerReturn.setLevelXp(Integer.parseInt(stats.substring(startOfNext, i)));
                 }
                 startOfNext = i + 1;
                 statCounter++;

@@ -92,7 +92,7 @@ public class Core {
         Scanner scan = new Scanner(System.in);
 
         // levelpoints declaration
-        int levelPoints = player.getLevel() * 2 - player.getPointsSpent();
+        //int levelPoints = (player.getLevel() * 2) - player.getPointsSpent();
         int levelingInput;
 
         System.out.println("===========Leveling==Menu===========");
@@ -103,7 +103,7 @@ public class Core {
         System.out.println("-- (4) Change name -----------------");
         System.out.println("-- (5) Nevermind -------------------");
         System.out.println("------------------------------------");
-        System.out.println("-------- Points: " + levelPoints + " ---------");
+        System.out.println("-------- Points: " + ((player.getLevel() * 2) - player.getPointsSpent()) + " ---------");
         System.out.println("====================================");
 
 
@@ -121,19 +121,19 @@ public class Core {
 
         // upgrades by the choice made (only if enough points are available)
 
-        if (levelPoints > 0) {
+        if (player.getPointsSpent() != player.getLevel() * 2) {
             switch (levelingInput) {
                 case 1:
                     player.setPointsSpent(player.getPointsSpent() + 1);
-                    
+
                     player.upgradeStrength();
                     System.out.println("<Leveled Strength by one>");
-                    
+
                     leveling();
                     break;
                 case 2:
                     player.setPointsSpent(player.getPointsSpent() + 1);
-                    
+
                     player.upgradeHealth();
                     System.out.println("<Leveled Health by two>");
                     leveling();
@@ -150,6 +150,8 @@ public class Core {
                     player.setPointsSpent(player.getPointsSpent() + 1);
                     System.out.println("Your Pokemons new Name: ");
                     player.setName(scan.next());
+
+                    leveling();
                 default:
             }
         }

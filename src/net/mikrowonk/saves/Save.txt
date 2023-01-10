@@ -1,1 +1,1 @@
-21 24 Thunder Cool 50 4 50 6
+25 30 Thunder Cool 50 17 99 4
