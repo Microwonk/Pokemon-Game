@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Turn_Based_Game:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="Turn_Based_Game.jar">
+      <element id="module-output" name="Turn_Based_Game" />
+    </root>
+  </artifact>
+</component>
