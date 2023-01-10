@@ -1,0 +1,13 @@
+The Pokemon
+
+1 -> Strength: 10
+  -> Health: 40
+  -> Special Move: Earthquake
+
+2 -> Strength: 20
+  -> Health: 20
+  -> Special Move: Thunder
+
+3 -> Strength: 5
+  -> Health: 70
+  -> Special Move: Roll
